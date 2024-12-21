@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your valid API key
+const apiKey = '3be53ea06057413d2c7c3c9a29db4e07'; // Replace with your valid API key
 
 document.getElementById('getWeather').addEventListener('click', () => {
   const city = document.getElementById('city').value.trim();
@@ -22,13 +22,14 @@ document.getElementById('getWeather').addEventListener('click', () => {
     })
     .then(data => {
       const { name } = data;
-      const { temp, humidity } = data.main;
+      const { temp, humidity, feels_like } = data.main;
       const { description, icon } = data.weather[0];
 
       weatherResult.innerHTML = `
         <h2 class="mb-3">${name}</h2>
         <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" class="mb-3">
         <p><strong>Temperature:</strong> ${temp} °C</p>
+        <p><strong>Feels Like:</strong> ${feels_like}</p>
         <p><strong>Humidity:</strong> ${humidity}%</p>
         <p><strong>Weather:</strong> ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
       `;
