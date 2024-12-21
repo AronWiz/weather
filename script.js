@@ -29,7 +29,7 @@ document.getElementById('getWeather').addEventListener('click', () => {
         <h2 class="mb-3">${name}</h2>
         <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" class="mb-3">
         <p><strong>Temperature:</strong> ${temp} °C</p>
-        <p><strong>Feels Like:</strong> ${feels_like}</p>
+        <p><strong>Feels Like:</strong> ${feels_like} </p>
         <p><strong>Humidity:</strong> ${humidity}%</p>
         <p><strong>Weather:</strong> ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
       `;
